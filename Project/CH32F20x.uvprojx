@@ -427,11 +427,6 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\source\bsp_uart.c</FilePath>
             </File>
-            <File>
-              <FileName>bsp_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\source\bsp_systick.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

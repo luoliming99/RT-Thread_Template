@@ -8,8 +8,8 @@
 * SPDX-License-Identifier: Apache-2.0
 *******************************************************************************/
 #include "ch32f20x_it.h"
+#include "board.h"
 #include "bsp_uart.h"
-#include "bsp_systick.h"
 
 /*********************************************************************
  * @fn      NMI_Handler
@@ -32,12 +32,12 @@ void NMI_Handler(void)
  *
  * @return  none
  */
-void HardFault_Handler(void)
-{
-  while (1)
-  {
-  }
-}
+//void HardFault_Handler(void)
+//{
+//  while (1)
+//  {
+//  }
+//}
 
 /*********************************************************************
  * @fn      MemManage_Handler
@@ -116,12 +116,12 @@ void DebugMon_Handler(void)
  *
  * @return  none
  */
-void PendSV_Handler(void)
-{
-  while (1)
-  {
-  }
-}
+//void PendSV_Handler(void)
+//{
+//  while (1)
+//  {
+//  }
+//}
 
 /*********************************************************************
  * @fn      SysTick_Handler
@@ -132,7 +132,7 @@ void PendSV_Handler(void)
  */
 void SysTick_Handler(void)
 {
-  g_systick_cnt++;
+  rt_os_tick_callback();
 }
 
 void DEBUG_USART_IRQHandler(void) 

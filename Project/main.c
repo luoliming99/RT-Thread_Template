@@ -1,5 +1,6 @@
-#include "ch32f20x.h"
-#include "bsp_systick.h"
+#include "board.h"
+#include "rtthread.h"
+
 #include "bsp_uart.h"
 
 #include "led.h"
@@ -16,7 +17,6 @@ int main( void )
 { 
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 
-    systick_init();
     uart_init();
     /*
      * SYSCLK = 144 MHz
@@ -31,6 +31,12 @@ int main( void )
     while (1)
     {
         led_set(LED_LF, TOGGLE);
-        delay_ms(500);
+        for (uint32_t i = 0; i < 10000; i++) 
+        {
+            for (uint32_t j = 0; j < 1000; j++)
+            {
+                ;
+            }
+        }
     }
 }

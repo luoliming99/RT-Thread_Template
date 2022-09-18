@@ -7,6 +7,8 @@
  * Date           Author       Notes
  * 2021-05-24                  the first version
  */
+ 
+#include "board.h"
 
 #include <rthw.h>
 #include <rtthread.h>
@@ -16,7 +18,7 @@
  * Please modify RT_HEAP_SIZE if you enable RT_USING_HEAP
  * the RT_HEAP_SIZE max value = (sram size - ZI size), 1024 means 1024 bytes
  */
-#define RT_HEAP_SIZE (15*1024)
+#define RT_HEAP_SIZE (4*1024)
 static rt_uint8_t rt_heap[RT_HEAP_SIZE];
 
 RT_WEAK void *rt_heap_begin_get(void)
@@ -44,12 +46,13 @@ void rt_os_tick_callback(void)
  */
 void rt_hw_board_init(void)
 {
-#error "TODO 1: OS Tick Configuration."
+//#error "TODO 1: OS Tick Configuration."
     /* 
      * TODO 1: OS Tick Configuration
      * Enable the hardware timer and call the rt_os_tick_callback function
      * periodically with the frequency RT_TICK_PER_SECOND. 
      */
+    SysTick_Config(SystemCoreClock / RT_TICK_PER_SECOND);
 
     /* Call components board initial (use INIT_BOARD_EXPORT()) */
 #ifdef RT_USING_COMPONENTS_INIT
