@@ -8,7 +8,7 @@
  * 2021-05-24                  the first version
  */
  
-#include "board.h"
+#include "ch32f20x.h"
 
 #include <rthw.h>
 #include <rtthread.h>

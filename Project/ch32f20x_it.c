@@ -8,8 +8,9 @@
 * SPDX-License-Identifier: Apache-2.0
 *******************************************************************************/
 #include "ch32f20x_it.h"
-#include "board.h"
 #include "bsp_uart.h"
+
+extern void rt_os_tick_callback(void);
 
 /*********************************************************************
  * @fn      NMI_Handler
@@ -132,7 +133,7 @@ void DebugMon_Handler(void)
  */
 void SysTick_Handler(void)
 {
-  rt_os_tick_callback();
+    rt_os_tick_callback();
 }
 
 void DEBUG_USART_IRQHandler(void) 
