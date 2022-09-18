@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,MPU6050</Define>
               <Undefine></Undefine>
-              <IncludePath>..\SRC\StdPeriphDriver\inc;..\SRC\CMSIS;..\SRC\Debug;..\Project;..\BSP\include;..\Device\include;..\Algorithm\include</IncludePath>
+              <IncludePath>..\SRC\StdPeriphDriver\inc;..\SRC\CMSIS;..\SRC\Debug;..\Project;..\BSP\include;..\Device\include;..\Algorithm\include;..\RT-Thread\3.1.5\components\finsh;..\RT-Thread\3.1.5\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,6 +396,16 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtconfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\rtconfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\board.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -486,6 +496,101 @@
               <FileName>ch32f20x_misc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SRC\StdPeriphDriver\src\ch32f20x_misc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt/source</GroupName>
+          <Files>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\clock.c</FilePath>
+            </File>
+            <File>
+              <FileName>components.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\components.c</FilePath>
+            </File>
+            <File>
+              <FileName>cpu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\cpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\idle.c</FilePath>
+            </File>
+            <File>
+              <FileName>ipc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\ipc.c</FilePath>
+            </File>
+            <File>
+              <FileName>irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\irq.c</FilePath>
+            </File>
+            <File>
+              <FileName>kservice.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\kservice.c</FilePath>
+            </File>
+            <File>
+              <FileName>mem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\mem.c</FilePath>
+            </File>
+            <File>
+              <FileName>memheap.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\memheap.c</FilePath>
+            </File>
+            <File>
+              <FileName>mempool.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\mempool.c</FilePath>
+            </File>
+            <File>
+              <FileName>object.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\object.c</FilePath>
+            </File>
+            <File>
+              <FileName>scheduler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\scheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>slab.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\slab.c</FilePath>
+            </File>
+            <File>
+              <FileName>thread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\thread.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\src\timer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt/ports</GroupName>
+          <Files>
+            <File>
+              <FileName>cpuport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\RT-Thread\3.1.5\libcpu\arm\cortex-m3\cpuport.c</FilePath>
+            </File>
+            <File>
+              <FileName>context_rvds.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\RT-Thread\3.1.5\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
             </File>
           </Files>
         </Group>
